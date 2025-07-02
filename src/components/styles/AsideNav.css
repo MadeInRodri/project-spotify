@@ -1,0 +1,84 @@
+.computer-aside {
+  background-color: var(--background-main-color);
+  margin: 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+
+  scrollbar-color: var(--background-container-color)
+    var(--background-main-color);
+  scrollbar-width: 1rem;
+}
+
+.aside-header {
+  color: white;
+  font-family: var(--principal-font-family);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside-header button {
+  background-color: var(--background-main-color);
+  border: none;
+  display: flex;
+  align-items: center;
+  border-radius: 10rem;
+  transition: background-color 0.3s ease;
+}
+
+.aside-header button:active {
+  background-color: var(--background-container-color);
+}
+
+.aside-header button i {
+  font-size: 2.5rem;
+  height: 2.5rem;
+}
+
+.aside-card {
+  background-color: var(--background-container-color);
+  color: var(--principal-font-color);
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  font-family: var(--principal-font-family);
+  font-size: 1.2rem;
+}
+
+.aside-card h3 {
+  font-size: 1.2rem;
+}
+
+.aside-card button {
+  font-family: var(--principal-font-family);
+  max-width: max-content;
+  width: auto;
+  padding: 0 1rem;
+  min-height: 2.5rem;
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 10rem;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+.computer-aside .icon {
+  color: var(--principal-font-color);
+  font-size: 1.5rem;
+}
+
+.aside-card p,
+.aside-card h3,
+.aside-header h2 {
+  user-select: none;
+}

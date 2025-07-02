@@ -1,0 +1,158 @@
+.mobile-header {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem;
+  height: 5vh;
+  gap: 1rem;
+}
+
+.mobile-header .icon {
+  font-size: 2rem;
+}
+
+.logo-name,
+.lateral-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mobile-menu .icon {
+  font-size: 2em;
+}
+
+.mobile-header .spotify-icon {
+  font-size: 2em;
+  color: var(--principal-font-color);
+}
+
+.logo-name h1 {
+  font-family: var(--principal-font-family);
+  font-size: 1.2rem;
+}
+
+.lateral-menu button {
+  font-family: var(--principal-font-family);
+  font-weight: bolder;
+
+  height: 100%;
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 10rem;
+
+  display: flex;
+  align-items: center;
+  border: none;
+  transition: color, background-color 0.3s ease;
+}
+
+.lateral-menu button:active {
+  background-color: #121212;
+  color: white;
+}
+
+.button-lateral {
+  display: flex;
+  align-items: center;
+}
+
+.button-lateral i {
+  font-size: 2em;
+  height: 2rem;
+}
+
+.mobile-main h4 {
+  font-size: 1.2em;
+  color: white;
+}
+
+.mobile-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: hsla(0, 0%, 0%, 0.75);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+}
+
+.mobile-footer button {
+  background-color: transparent;
+  border: none;
+  color: hsla(0, 0%, 100%, 0.5);
+  margin: 0.5rem;
+}
+
+.mobile-menu {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 20;
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  color: white;
+  top: 0;
+}
+
+.mobile-menu header {
+  display: flex;
+  justify-content: end;
+  padding: 1rem 1rem;
+}
+
+.mobile-menu section {
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+.mobile-menu .button-menu {
+  background-color: transparent;
+  width: max-content;
+  border: none;
+}
+
+.mobile-main {
+  padding: 1rem;
+  background: #121212;
+  margin: 0;
+  border-radius: 0px;
+  font-family: var(--principal-font-family);
+}
+
+.mobile-main section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.article-one,
+.article-two {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 3rem;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+}
+
+.article-two {
+  font-size: 1.2rem;
+  border-top: 1px solid white;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-footer .icon {
+  font-size: 1.5rem;
+  color: var(--secondary-font-color);
+}

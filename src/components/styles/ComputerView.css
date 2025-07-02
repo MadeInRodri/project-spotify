@@ -1,0 +1,5 @@
+.computer-body-container {
+  display: grid;
+  grid-template-columns: 25% 75%;
+  height: 90vh;
+}

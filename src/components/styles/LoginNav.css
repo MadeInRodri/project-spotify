@@ -1,0 +1,120 @@
+.login-nav {
+  color: white;
+  font-family: var(--principal-font-family);
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--background-container-color);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.login-nav header,
+.login-nav main,
+.login-nav footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  width: 20rem;
+}
+
+.login-nav header {
+  text-align: center;
+
+  .spotify-icon {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.2rem;
+  }
+}
+
+.login-nav main {
+  gap: 0;
+
+  .register {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--secondary-font-color);
+  }
+
+  .google-register {
+    margin-top: 2rem;
+  }
+}
+
+.login-nav {
+  section {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer {
+    text-align: center;
+    color: var(--secondary-font-color);
+
+    section {
+      padding: 2rem 0 1rem 0;
+      border-top: 1px solid hsla(0, 0%, 100%, 0.25);
+    }
+
+    a {
+      color: var(--principal-font-color);
+      font-weight: bolder;
+    }
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
+  button {
+    height: 3rem;
+    width: 100%;
+    border-radius: 10rem;
+    border: none;
+
+    font-family: var(--principal-font-family);
+    font-weight: 900;
+    cursor: pointer;
+  }
+}
+
+.register {
+  .register-button {
+    background-color: var(--secondary-button-background-color);
+  }
+}
+
+.google-register {
+  .google-register-button {
+    color: white;
+    background-color: transparent;
+    border: 1px solid var(--secondary-font-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .google-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (width <425px) {
+  .login-nav header,
+  .login-nav main,
+  .login-nav footer {
+    width: 100%;
+    padding: 0 1rem;
+  }
+}

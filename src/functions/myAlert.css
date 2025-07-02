@@ -1,0 +1,11 @@
+.mi-popup {
+  background-color: var(--background-container-color);
+  font-family: var(--principal-font-family);
+}
+
+.mi-confirmar {
+  background-color: var(--secondary-button-background-color);
+  font-family: var(--principal-font-family);
+  border-radius: 10rem;
+  color: var(--background-main-color);
+}

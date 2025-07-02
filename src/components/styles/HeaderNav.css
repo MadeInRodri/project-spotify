@@ -1,0 +1,145 @@
+.computer-header {
+  height: 8%;
+  margin: 0 2rem;
+
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+
+  overflow: hidden;
+}
+
+.computer-header picture {
+  display: flex;
+  width: 3rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.computer-header .spotify-icon {
+  font-size: 3em;
+  color: var(--principal-font-color);
+}
+
+.home {
+  background-color: var(--background-container-color);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10rem;
+}
+
+.icon {
+  font-size: 1.5em;
+  height: 1.5rem;
+  color: var(--principal-font-color);
+}
+
+.search {
+  width: 100%;
+  display: flex;
+  background-color: var(--background-container-color);
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 2rem;
+  height: 80%;
+}
+
+.search .icon {
+  color: var(--secondary-font-color);
+}
+
+.search input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: var(--principal-font-family);
+  color: var(--principal-font-color);
+}
+
+input:focus {
+  outline: none;
+}
+
+.computer-header a {
+  color: var(--secondary-font-color);
+  transition: color, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.computer-header a:active,
+.computer-header a:hover {
+  color: var(--principal-font-color);
+}
+
+.hiperlink {
+  padding: 1rem;
+  height: 50%;
+  font-family: var(--principal-font-family);
+
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1em;
+  font-weight: bold;
+  border-right: 1px solid var(--secondary-font-color);
+  justify-content: center;
+  align-items: center;
+}
+
+.account {
+  font-family: var(--principal-font-family);
+  height: 80%;
+  display: flex;
+  gap: 1rem;
+  font-size: 1em;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.computer-header .account-btn {
+  color: black;
+  background-color: var(--button-background-color);
+  height: 100%;
+  text-align: center;
+  padding: 0 2rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  border: none;
+  font-family: var(--principal-font-family);
+  width: max-content;
+  font-weight: bolder;
+  transition: color, background-color 0.3s ease;
+}
+
+.account-btn:hover,
+.account-btn:active {
+  background-color: var(--background-container-color);
+  color: white;
+}
+
+.computer-header section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  height: 100%;
+}
+
+.computer-header .search section {
+  width: 100%;
+}
+
+.account {
+  h3 {
+    width: max-content;
+    color: white;
+  }
+}
