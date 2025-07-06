@@ -10,23 +10,10 @@ export default function LoginNav() {
   const googleAuth = () => {
     signInWithPopup(auth, provider)
       .then((result) => {
-        // const user = result.user;
-
-        // console.log(user.displayName); // Nombre del usuario
-        // console.log(user.email); // Correo
-        // console.log(user.photoURL); // URL de su foto
-        // console.log(user.uid);
         navigate("/");
       })
       .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // The email of the user's account used.
-        const email = error.customData.email;
-        // The AuthCredential type that was used.
-        const credential = GoogleAuthProvider.credentialFromError(error);
-        // ...
+        console.error("Ha ocurrido un problema al iniciar sesión", error);
       });
   };
 

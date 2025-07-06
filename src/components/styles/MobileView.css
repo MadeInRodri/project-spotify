@@ -6,6 +6,10 @@
   height: 5vh;
   gap: 1rem;
 }
+.mobile-header h2 {
+  font-family: var(--principal-font-family);
+  font-size: 0.6rem;
+}
 
 .mobile-header .icon {
   font-size: 2rem;

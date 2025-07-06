@@ -3,7 +3,6 @@ import Enjambre from "../resourses/Enjambre.json";
 import JoseJose from "../resourses/JoseJose.json";
 import Joji from "../resourses/Joji.json";
 import "./styles/MobileView.css";
-import { useState } from "react";
 
 import myAlert from "../functions/myAlert";
 
@@ -15,7 +14,24 @@ import { CiSearch } from "react-icons/ci";
 import { BsCollectionPlayFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
+import { onAuthStateChanged, signOut } from "firebase/auth";
+import { auth } from "../fireBase/appConfig";
+import { useState, useEffect } from "react";
+
 export default function MobileView() {
+  const [activeSesion, setActiveSesion] = useState(false);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setActiveSesion(user);
+        console.log(activeSesion);
+      } else {
+        setActiveSesion(false);
+      }
+    });
+  });
+
   const [displayMenu, setDisplayMenu] = useState("none");
   return (
     <>
@@ -29,10 +45,32 @@ export default function MobileView() {
           </button>
         </header>
         <section>
-          <article className="article-one">
-            <Link to="/login">Iniciar sesión</Link>
-            <Link to="/login">Registrarse</Link>
-          </article>
+          {activeSesion ? (
+            <>
+              <article className="article-one">
+                <Link
+                  onClick={() => {
+                    signOut(auth)
+                      .then(() => {
+                        console.log("Se ha deslogeado con exito");
+                      })
+                      .catch((error) => {
+                        console.error("Ha ocurrido un error: ", error);
+                      });
+                  }}
+                >
+                  Cerrar Sesión
+                </Link>
+              </article>
+            </>
+          ) : (
+            <>
+              <article className="article-one">
+                <Link to="/accounts">Iniciar sesión</Link>
+                <Link to="/login">Registrarse</Link>
+              </article>
+            </>
+          )}
           <article className="article-two">
             <a>Premium</a>
             <a>Ayuda</a>
@@ -49,7 +87,11 @@ export default function MobileView() {
           <h1>Spotify</h1>
         </div>
         <div className="lateral-menu">
-          <button onClick={myAlert}>Abrir aplicación</button>
+          {activeSesion ? (
+            <h2>Bienvenido {activeSesion.displayName}</h2>
+          ) : (
+            <button onClick={myAlert}>Abrir aplicación</button>
+          )}
           <div
             className="button-lateral"
             onClick={() => setDisplayMenu("flex")}
